@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAS-AE - 德国DIAS红外测温仪_红外热像仪_工业测温解决方案服务商</title>
+<meta name="keywords" content="红外测温仪,红外热像仪,德国DIAS,工业测温,黑体炉,在线扫描测温系统,冶金测温,光伏测温,玻璃测温">
+<meta name="description" content="NAS-AE是德国DIAS红外系统有限公司中国区独家授权服务商，主营DIAS红外测温仪、热像仪、在线扫描测温系统等，提供冶金/玻璃/光伏/锂电/化工等行业工业测温解决方案及全周期技术服务。">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* 全局样式重置与基础设置 */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei", "PingFang SC", sans-serif;scroll-behavior:smooth;}
+body{color:#333;background:#f8f9fa;line-height:1.9;padding-top:80px;}
+a{text-decoration:none;color:inherit;transition: all 0.3s ease;}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
+img{max-width:100%;vertical-align:middle;}
+.btn{display:inline-block;padding:10px 20px;background:#0088FF;color:#fff;border-radius:4px;transition:all 0.3s;border:none;cursor:pointer;font-size:14px;}
+.btn:hover{background:#0066CC;transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,136,255,0.2);}
+.btn-outline{background:transparent;border:1px solid #0088FF;color:#0088FF;}
+.btn-outline:hover{background:#0088FF;color:#fff;}
+.text-primary{color:#0088FF;}
+.bg-primary{background:#0088FF;}
+.bg-light{background:#f9f9f9;}
+.shadow{box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+.animate-fade{animation:fadeIn 0.5s ease;}
+@keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+
+/* 导航栏字体与布局 已优化 */
+.header-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #eee;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  padding:0 20px;
+  transition: all 0.3s;
+}
+.header-nav.fixed{height:70px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.header-nav .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-nav .logo{height: 60px;transition:all 0.3s;}
+.header-nav.fixed .logo{height:50px;}
+.nav-menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-menu li{
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  padding: 8px 0;
+}
+.nav-menu li:hover{color: #0088FF;}
+.nav-menu li::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0088FF;
+  transition: width 0.3s ease;
+}
+.nav-menu li:hover::after{width: 100%;}
+
+.mobile-menu-btn{display:none;font-size:24px;color:#333;cursor:pointer;transition:all 0.3s;}
+.mobile-menu{
+  display:none;
+  position:fixed;
+  top:80px;left:0;right:0;
+  background:#fff;
+  z-index:9998;
+  padding:20px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+.mobile-menu ul{list-style:none;}
+.mobile-menu ul li{padding:15px 0;border-bottom:1px solid #eee;}
+.mobile-menu ul li:last-child{border:none;}
+
+/* 轮播图 */
+.banner{
+  width:100%;
+  height:450px;
+  background:url("https://s41.ax1x.com/2026/03/30/pe3lvyq.png") no-repeat center center;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.banner::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.1);
+}
+.banner-text{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  color:#333;
+  max-width:800px;
+  padding:0 20px;
+}
+.banner-text h1{font-size:36px;margin-bottom:20px;font-weight:bold;}
+.banner-text p{font-size:18px;margin-bottom:30px;line-height:1.8;}
+
+/* 核心优势 */
+.advantage-hero{
+  padding:60px 0;
+  background:#fff;
+  text-align:center;
+}
+.advantage-hero h2{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#222;
+}
+.advantage-hero .sub-title{
+  color:#666;
+  margin-bottom:40px;
+  font-size:16px;
+}
+.advantage-cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+.advantage-card{
+  padding:30px 20px;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 3px 15px rgba(0,0,0,0.05);
+  transition:all 0.3s;
+}
+.advantage-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  border-color:#0088FF;
+}
+.advantage-card i{
+  font-size:40px;
+  color:#0088FF;
+  margin-bottom:20px;
+}
+.advantage-card h3{
+  font-size:18px;
+  margin-bottom:15px;
+  color:#333;
+}
+.advantage-card p{
+  color:#666;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* 主体 */
+.main{padding:40px 0;background:#f8f9fa;}
+.left{width:260px;float:left;background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;}
+.left .sidebar-title{
+  height:60px;line-height:60px;
+  background:#0088FF;color:#fff;font-size:18px;
+  padding-left:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.left .sidebar-title i{font-size:20px;}
+.left .sidebar-module{padding:20px;border-bottom:1px solid #f0f0f0;}
+.left .sidebar-module:last-child{border:none;}
+.left .sidebar-module h3{
+  font-size:16px;color:#0088FF;
+  margin-bottom:15px;padding-bottom:10px;
+  border-bottom:1px dashed #ddd;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.left .sidebar-module h3 i{font-size:14px;}
+.left .sidebar-module ul{list-style:none;}
+.left .sidebar-module ul li{
+  height:45px;line-height:45px;padding-left:15px;
+  border-radius:4px;margin-bottom:8px;
+  font-size:14px;
+  transition: all 0.3s ease;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.left .sidebar-module ul li i{font-size:12px;color:#999;transition:all 0.3s;}
+.left .sidebar-module ul li:hover{
+  background:#e8f4fc;
+  padding-left:20px;
+  color:#0088FF;
+}
+.left .sidebar-module ul li:hover i{color:#0088FF;}
+.left .contact-info{
+  padding:20px;line-height:1.8;
+  background:#e8f4fc;
+  font-size:14px;
+}
+.left .contact-info h4{
+  color:#0088FF;
+  font-size:16px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.left .contact-info p{margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.left .contact-info p i{color:#0088FF;width:16px;text-align:center;}
+
+.right{width:880px;float:right;}
+.section{
+  margin-bottom:40px;background:#fff;
+  padding:30px;border-radius:8px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.right h2{
+  font-size:22px;color:#222;
+  padding-bottom:15px;border-bottom:2px solid #e8f4fc;
+  margin-bottom:25px;position:relative;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.right h2::after{
+  content:'';position:absolute;
+  bottom:-2px;left:0;
+  width:100px;height:2px;
+  background:#0088FF;
+}
+.right h2 i{color:#0088FF;}
+.right .content{font-size:15px;line-height:2;color:#555;}
+.right .content p{margin-bottom:18px;}
+
+/* 产品中心 已修复点击跳转 */
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:20px;
+}
+.product{
+  border:1px solid #eee;
+  padding:20px;
+  background:#fff;
+  text-align:center;
+  transition: all 0.3s ease;
+  border-radius:8px;
+  overflow:hidden;
+}
+.product-img{
+  height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+  background:#f9f9f9;
+  border-radius:4px;
+  overflow:hidden;
+}
+.product img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:all 0.3s;
+}
+.product:hover img{transform:scale(1.05);}
+.product h3{
+  font-size:16px;
+  margin-bottom:10px;
+  color:#333;
+  font-weight:normal;
+}
+.product .params{
+  font-size:12px;
+  color:#999;
+  margin-bottom:15px;
+  line-height:1.5;
+}
+.product:hover {
+  box-shadow: 0 8px 20px rgba(0,136,255,0.15);
+  border-color: #0088FF;
+  transform: translateY(5px);
+}
+
+/* 产品弹窗 已修复 */
+.product-modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.5);
+  z-index:99999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.modal-content{
+  background:#fff;
+  width:100%;
+  max-width:900px;
+  border-radius:8px;
+  max-height:90vh;
+  overflow-y:auto;
+  padding:30px;
+  position:relative;
+}
+.close-modal{
+  position:absolute;
+  top:20px;right:20px;
+  font-size:24px;
+  color:#999;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+.close-modal:hover{color:#ff4444;}
+.modal-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:20px;
+}
+.modal-img{border-radius:8px;overflow:hidden;}
+.modal-img img{width:100%;height:auto;}
+.modal-info h4{
+  font-size:18px;
+  margin-bottom:15px;
+  color:#0088FF;
+}
+.modal-info .param-item{
+  display:flex;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px dashed #eee;
+}
+.modal-info .param-item:last-child{border:none;}
+.param-label{
+  width:120px;
+  color:#666;
+  font-weight:bold;
+}
+.param-value{flex:1;color:#333;}
+.modal-desc{
+  grid-column:1/3;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid #eee;
+}
+.modal-desc h5{
+  font-size:16px;
+  margin-bottom:10px;
+  color:#333;
+}
+.modal-desc p{line-height:1.8;color:#666;margin-bottom:10px;}
+
+/* 成功案例 已修复点击展开 */
+.case-item{
+  border:1px solid #eee;
+  padding:25px;
+  margin-bottom:25px;
+  background:#fff;
+  border-radius:8px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+}
+.case-item:hover{
+  box-shadow: 0 8px 20px rgba(0,136,255,0.1);
+  transform: translateY(5px);
+  border-color:#0088FF;
+}
+.case-header{
+  display:flex;
+  gap:20px;
+  margin-bottom:20px;
+}
+.case-img{
+  width:200px;
+  height:140px;
+  border-radius:4px;
+  overflow:hidden;
+  flex-shrink:0;
+}
+.case-img img{width:100%;height:100%;object-fit:cover;}
+.case-title{
+  flex:1;
+}
+.case-title h3{
+  font-size:18px;
+  margin-bottom:10px;
+  color:#333;
+}
+.case-title p{
+  color:#999;
+  font-size:13px;
+}
+.case-detail{
+  display:none;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px dashed #ddd;
+  line-height:1.8;
+  animation:fadeIn 0.3s ease;
+}
+.case-detail .case-tag{
+  display:inline-block;
+  padding:5px 10px;
+  background:#e8f4fc;
+  color:#0088FF;
+  font-size:12px;
+  border-radius:4px;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+.case-detail p{margin-bottom:15px;}
+
+/* 新闻资讯 已修复点击显示 */
+.news-content{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.news-list{grid-column:1/2;}
+.news-list ul{list-style:none;}
+.news-list ul li{
+  padding:15px;
+  border-bottom:1px dashed #eee;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  border-radius:4px;
+  margin-bottom:10px;
+  transition:all 0.3s;
+}
+.news-list ul li:hover{background:#f9f9f9;transform:translateX(5px);}
+.news-list ul li:last-child{border:none;}
+.news-list ul li .news-text{
+  flex:1;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.news-list ul li .news-date{
+  color:#999;
+  font-size:12px;
+  margin-left:15px;
+  white-space:nowrap;
+}
+.news-promo{
+  grid-column:2/3;
+  background:#e8f4fc;
+  border-radius:8px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.news-promo img{
+  width:100%;
+  max-width:200px;
+  margin-bottom:20px;
+}
+.news-promo h4{
+  font-size:18px;
+  color:#0088FF;
+  margin-bottom:10px;
+}
+.news-promo p{
+  color:#666;
+  margin-bottom:20px;
+  font-size:14px;
+}
+.news-detail{
+  display:none;
+  margin-top:20px;
+  padding:25px;
+  background:#f9f9f9;
+  border-radius:8px;
+  animation:fadeIn 0.3s ease;
+}
+.news-detail h3{
+  color:#0088FF;
+  margin-bottom:20px;
+  font-size:20px;
+  text-align:center;
+}
+.news-detail .news-meta{
+  text-align:center;
+  color:#999;
+  font-size:13px;
+  margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px dashed #ddd;
+}
+.news-detail p{margin-bottom:15px;line-height:1.8;}
+
+/* 下载中心 已加真实下载链接 */
+.download-section{margin-top:40px;}
+.download-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+.download-item{
+  padding:20px;
+  background:#f9f9f9;
+  border-radius:8px;
+  border-left:3px solid #0088FF;
+  transition:all 0.3s;
+}
+.download-item:hover{
+  background:#e8f4fc;
+  transform:translateY(3px);
+}
+.download-item h4{
+  font-size:16px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.download-item h4 i{color:#0088FF;}
+.download-item p{
+  font-size:13px;
+  color:#666;
+  margin-bottom:15px;
+}
+.download-item .download-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  color:#0088FF;
+}
+.download-item .download-btn:hover{color:#0066CC;text-decoration:underline;}
+
+.grid-box{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+.grid-item{
+  padding:20px;
+  background:#f9f9f9;
+  border-radius:8px;
+  border-left:4px solid #0088FF;
+  transition:all 0.3s;
+}
+.grid-item:hover{
+  background:#e8f4fc;
+  transform:translateY(3px);
+}
+.grid-item h4{
+  font-size:16px;
+  color:#0088FF;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.grid-item h4 i{font-size:14px;}
+.grid-item p{
+  font-size:14px;
+  color:#666;
+  line-height:1.8;
+}
+.full-width{grid-column:1/3;}
+
+/* 联系我们 已修复跳转 */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-top:20px;
+}
+.contact-item{
+  padding:20px;
+  background:#f9f9f9;
+  border-radius:8px;
+}
+.contact-item h4{
+  font-size:18px;
+  color:#0088FF;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.contact-item p{
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:15px;
+}
+.contact-item p i{
+  color:#0088FF;
+  width:20px;
+  text-align:center;
+}
+.contact-map{
+  grid-column:1/3;
+  margin-top:20px;
+  border-radius:8px;
+  overflow:hidden;
+  height:400px;
+  border:1px solid #eee;
+}
+.contact-map img{width:100%;height:100%;object-fit:cover;}
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: #0088FF;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow:0 4px 12px rgba(0,136,255,0.3);
+  font-size:20px;
+}
+.back-to-top.show {display: block;}
+.back-to-top:hover{
+  background:#0066CC;
+  transform:scale(1.1);
+}
+
+/* 底部版权 */
+.copyright-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background: #222;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+:target {scroll-margin-top: 90px;}
+
+@media (max-width: 1200px) {
+  .container{width:95%;}
+  .left{width:240px;}
+  .right{width:calc(100% - 250px);}
+  .advantage-cards{grid-template-columns:repeat(2,1fr);}
+  .products{grid-template-columns:repeat(2,1fr);}
+  .news-content{grid-template-columns:1fr;}
+  .news-promo{grid-column:1/2;margin-top:20px;}
+}
+
+@media (max-width: 992px) {
+  .header-nav .nav-menu{display:none;}
+  .mobile-menu-btn{display:block;}
+  .banner{height:350px;}
+  .banner-text h1{font-size:28px;}
+  .banner-text p{font-size:16px;}
+  .left, .right{width:100%;float:none;}
+  .left{margin-bottom:30px;}
+}
+
+@media (max-width: 768px) {
+  body{padding-top:70px;}
+  .header-nav{height:70px;}
+  .mobile-menu{top:70px;}
+  .banner{height:280px;}
+  .banner-text h1{font-size:24px;}
+  .banner-text p{font-size:14px;margin-bottom:20px;}
+  .advantage-hero{padding:40px 0;}
+  .advantage-cards{grid-template-columns:1fr;}
+  .products{grid-template-columns:1fr;}
+  .grid-box{grid-template-columns:1fr;}
+  .full-width{grid-column:1/1;}
+  .message-content form{grid-template-columns:1fr;}
+  .form-full{grid-column:1/1;}
+  .form-submit{grid-column:1/1;}
+  .case-header{flex-direction:column;}
+  .case-img{width:100%;height:auto;}
+  .modal-body{grid-template-columns:1fr;}
+  .modal-desc{grid-column:1/1;}
+  .contact-map{height:300px;}
+}
+
+@media (max-width: 576px) {
+  .banner-text h1{font-size:20px;}
+  .btn{padding:8px 15px;font-size:13px;}
+  .section{padding:20px;}
+  .message-content{padding:20px;}
+  .back-to-top{width:40px;height:40px;line-height:40px;font-size:18px;bottom:20px;right:20px;}
+}
+</style>
+</head>
+
+<body>
+<!-- 导航栏 -->
+<div class="header-nav" id="headerNav">
+  <div class="container">
+    <img src="https://s41.ax1x.com/2026/03/26/peQzCa4.png" alt="NAS-AE Logo" class="logo" loading="lazy">
+    <ul class="nav-menu">
+      <li><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
+      <li><a href="#about"><i class="fas fa-info-circle"></i> 关于我们</a></li>
+      <li><a href="#products"><i class="fas fa-box"></i> 产品中心</a></li>
+      <li><a href="#service"><i class="fas fa-cogs"></i> 技术服务</a></li>
+      <li><a href="#cases"><i class="fas fa-trophy"></i> 成功案例</a></li>
+      <li><a href="#news"><i class="fas fa-newspaper"></i> 新闻资讯</a></li>
+      <li><a href="#download"><i class="fas fa-download"></i> 下载中心</a></li>
+      <li><a href="#contact"><i class="fas fa-phone"></i> 联系我们</a></li>
+      <li><a href="#message"><i class="fas fa-comment"></i> 在线留言</a></li>
+    </ul>
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" onclick="closeMobileMenu()"><i class="fas fa-home"></i> 首页</a></li>
+    <li><a href="#about" onclick="closeMobileMenu()"><i class="fas fa-info-circle"></i> 关于我们</a></li>
+    <li><a href="#products" onclick="closeMobileMenu()"><i class="fas fa-box"></i> 产品中心</a></li>
+    <li><a href="#service" onclick="closeMobileMenu()"><i class="fas fa-cogs"></i> 技术服务</a></li>
+    <li><a href="#cases" onclick="closeMobileMenu()"><i class="fas fa-trophy"></i> 成功案例</a></li>
+    <li><a href="#news" onclick="closeMobileMenu()"><i class="fas fa-newspaper"></i> 新闻资讯</a></li>
+    <li><a href="#download" onclick="closeMobileMenu()"><i class="fas fa-download"></i> 下载中心</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()"><i class="fas fa-phone"></i> 联系我们</a></li>
+    <li><a href="#message" onclick="closeMobileMenu()"><i class="fas fa-comment"></i> 在线留言</a></li>
+  </ul>
+</div>
+
+<div class="banner" id="home">
+  <div class="banner-text animate-fade">
+    <h1>德国DIAS红外测温解决方案专业服务商</h1>
+    <p>专注冶金、光伏、玻璃、锂电、化工等行业，提供高精度红外测温仪、热像仪及全周期技术服务</p>
+    <a href="#message" class="btn">立即咨询 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<div class="advantage-hero">
+  <div class="container">
+    <h2>我们的核心优势</h2>
+    <p class="sub-title">10年+行业沉淀，500+成功案例，为工业测温提供可靠保障</p>
+    <div class="advantage-cards">
+      <div class="advantage-card">
+        <i class="fas fa-certificate"></i>
+        <h3>官方授权 正品保障</h3>
+        <p>德国DIAS官方独家授权，100%原装进口产品，原厂质保，杜绝翻新机和仿制品</p>
+      </div>
+      <div class="advantage-card">
+        <i class="fas fa-user-cog"></i>
+        <h3>专业团队 技术领先</h3>
+        <p>10年+行业经验工程师团队，原厂认证培训，可提供定制化技术解决方案</p>
+      </div>
+      <div class="advantage-card">
+        <i class="fas fa-clock"></i>
+        <h3>7×24小时 快速响应</h3>
+        <p>全国主要城市48小时上门服务，远程技术支持全天候响应，保障生产不中断</p>
+      </div>
+      <div class="advantage-card">
+        <i class="fas fa-industry"></i>
+        <h3>行业深耕 方案成熟</h3>
+        <p>覆盖冶金/光伏/玻璃等全行业，成熟方案可快速复制落地，降低实施成本</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="container">
+    <div class="left">
+      <div class="sidebar-title">
+        <i class="fas fa-th-list"></i> 产品导航
+      </div>
+      
+      <div class="sidebar-module">
+        <h3><i class="fas fa-thermometer-half"></i> 红外测温仪系列</h3>
+        <ul>
+          <li><i class="fas fa-angle-right"></i> PYROSPOT 固定式测温仪</li>
+          <li><i class="fas fa-angle-right"></i> PYROVIEW 便携式测温仪</li>
+          <li><i class="fas fa-angle-right"></i> PYROLINE 在线式测温仪</li>
+          <li><i class="fas fa-angle-right"></i> 高温红外测温仪</li>
+          <li><i class="fas fa-angle-right"></i> 低温红外测温仪</li>
+          <li><i class="fas fa-angle-right"></i> 双色红外测温仪</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-module">
+        <h3><i class="fas fa-camera"></i> 热像仪系列</h3>
+        <ul>
+          <li><i class="fas fa-angle-right"></i> PYROVIEW 700 系列</li>
+          <li><i class="fas fa-angle-right"></i> PYROVIEW 800 系列</li>
+          <li><i class="fas fa-angle-right"></i> 工业级热像仪</li>
+          <li><i class="fas fa-angle-right"></i> 便携式热像仪</li>
+          <li><i class="fas fa-angle-right"></i> 在线式热像仪</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-module">
+        <h3><i class="fas fa-industry"></i> 行业解决方案</h3>
+        <ul>
+          <li><i class="fas fa-angle-right"></i> 冶金行业测温方案</li>
+          <li><i class="fas fa-angle-right"></i> 光伏行业测温方案</li>
+          <li><i class="fas fa-angle-right"></i> 玻璃行业测温方案</li>
+          <li><i class="fas fa-angle-right"></i> 化工行业测温方案</li>
+          <li><i class="fas fa-angle-right"></i> 锂电行业测温方案</li>
+          <li><i class="fas fa-angle-right"></i> 氢能行业测温方案</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-module">
+        <h3><i class="fas fa-headset"></i> 技术支持</h3>
+        <ul>
+          <li><i class="fas fa-angle-right"></i> 产品选型指导</li>
+          <li><i class="fas fa-angle-right"></i> 安装调试服务</li>
+          <li><i class="fas fa-angle-right"></i> 技术培训课程</li>
+          <li><i class="fas fa-angle-right"></i> 售后维修保养</li>
+          <li><i class="fas fa-angle-right"></i> 常见问题解答</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-module">
+        <h3><i class="fas fa-building"></i> 关于我们</h3>
+        <ul>
+          <li><i class="fas fa-angle-right"></i> 企业简介</li>
+          <li><i class="fas fa-angle-right"></i> 发展历程</li>
+          <li><i class="fas fa-angle-right"></i> 团队介绍</li>
+          <li><i class="fas fa-angle-right"></i> 荣誉资质</li>
+          <li><i class="fas fa-angle-right"></i> 合作伙伴</li>
+        </ul>
+      </div>
+
+      <div class="contact-info">
+        <h4><i class="fas fa-phone-square-alt"></i> 快速联系</h4>
+        <p><i class="fas fa-phone"></i> <strong>服务热线：</strong>18255181513</p>
+        <p><i class="fas fa-envelope"></i> <strong>商务邮箱：</strong>nas_ae@163.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>公司地址：</strong>安徽省合肥市包河区淝河镇龙川路99号包河区人工智能视觉产业港（中国视界）启动区项目B5幢1单元102</p>
+        <p><i class="fas fa-clock"></i> <strong>工作时间：</strong>周一至周五 9:00-18:00</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <!-- 关于我们 -->
+      <div id="about" class="section">
+        <h2><i class="fas fa-info-circle"></i> 关于我们</h2>
+        <div class="content">
+          <p>NAS-AE 是德国DIAS红外系统有限公司（DIAS Infrared GmbH）中国区独家授权服务商，专注于工业红外测温领域的技术研发、产品销售和解决方案落地，是国内领先的工业测温智能化服务商。</p>
+          <p>德国DIAS Infrared GmbH成立于1992年，总部位于德国斯图加特，是全球领先的红外测温技术制造商，产品广泛应用于冶金、光伏、玻璃、化工、锂电等工业领域。NAS-AE作为DIAS在中国的核心合作伙伴，全面负责DIAS产品的销售、技术支持、安装调试和售后服务。</p>
+          <p>公司核心团队拥有10年以上工业测温行业经验，深耕冶金、光伏、玻璃、化工、锂电等领域，为超过500家工业企业提供了高精度、高可靠性的温度测量解决方案。我们不仅提供100%原装进口的DIAS全系列产品，还具备强大的本地化技术服务能力，所有工程师均通过DIAS原厂专业认证。</p>
+          <p>秉承“精准测温，赋能工业”的企业理念，NAS-AE致力于将德国先进的红外测温技术与中国工业场景深度融合，帮助客户实现生产工艺优化、产品质量提升和能耗成本降低，成为工业企业数字化转型的可靠合作伙伴。</p>
+        </div>
+      </div>
+
+      <!-- 产品中心 -->
+      <div id="products" class="section">
+        <h2><i class="fas fa-box"></i> 产品中心</h2>
+        <div class="products">
+          <div class="product" onclick="openProductModal('product1')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3KVZF.jpg" alt="PYROSPOT 固定式红外测温仪">
+            </div>
+            <h3>PYROSPOT 固定式红外测温仪</h3>
+            <div class="params">测温范围：200-1800℃ | 精度：±0.5℃</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+          <div class="product" onclick="openProductModal('product2')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3KeIJ.jpg" alt="固定式红外热像仪">
+            </div>
+            <h3>固定式红外热像仪</h3>
+            <div class="params">分辨率：384×288 | 帧率：60Hz</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+          <div class="product" onclick="openProductModal('product3')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3Kni9.png" alt="PYROVIEW 便携式测温仪">
+            </div>
+            <h3>PYROVIEW 便携式测温仪</h3>
+            <div class="params">测温范围：-20-2000℃ | 防护等级：IP65</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+          <div class="product" onclick="openProductModal('product4')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3KuGR.jpg" alt="黑体炉">
+            </div>
+            <h3>黑体炉</h3>
+            <div class="params">温度稳定性：±0.1℃ | 发射率：0.99</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+          <div class="product" onclick="openProductModal('product5')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3MuTg.jpg" alt="非接触测温热成像系统">
+            </div>
+            <h3>非接触测温热成像系统</h3>
+            <div class="params">测温精度：±1℃ | 响应时间：≤1ms</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+          <div class="product" onclick="openProductModal('product6')">
+            <div class="product-img">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3MMkQ.jpg" alt="红外探测器">
+            </div>
+            <h3>红外探测器</h3>
+            <div class="params">光谱范围：7.5-14μm | 探测灵敏度：50mK</div>
+            <button class="btn btn-outline">查看详情</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 产品弹窗 -->
+      <div class="product-modal" id="productModal" onclick="clickModalClose(event)">
+        <div class="modal-content animate-fade">
+          <span class="close-modal" onclick="closeProductModal()">&times;</span>
+          <div class="modal-body" id="modalBody"></div>
+        </div>
+      </div>
+
+      <!-- 技术服务 -->
+      <div id="service" class="section">
+        <h2><i class="fas fa-cogs"></i> 技术服务</h2>
+        <div class="content">
+          <div class="grid-box">
+            <div class="grid-item">
+              <h4><i class="fas fa-search"></i> 产品选型与方案定制</h4>
+              <p>根据行业特点、工艺要求、使用环境，提供精准的产品选型和定制化测温解决方案。</p>
+            </div>
+            <div class="grid-item">
+              <h4><i class="fas fa-tools"></i> 现场安装调试与培训</h4>
+              <p>专业工程师上门安装调试，提供设备操作、维护保养、数据解读等全流程技术培训。</p>
+            </div>
+            <div class="grid-item">
+              <h4><i class="fas fa-shield-alt"></i> 售后维修与质保服务</h4>
+              <p>所有产品提供1-3年原厂质保，快速响应维修需求，备机服务保障生产连续性。</p>
+            </div>
+            <div class="grid-item">
+              <h4><i class="fas fa-network-wired"></i> 自动化系统集成</h4>
+              <p>测温系统与MES/ERP系统集成，实现温度数据互联互通和生产工艺智能分析。</p>
+            </div>
+            <div class="grid-item full-width">
+              <h4><i class="fas fa-sync-alt"></i> 设备升级与改造服务</h4>
+              <p>针对老旧测温设备提供升级改造方案，延长设备使用寿命，降低改造成本，提升测量精度。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 成功案例 -->
+      <div id="cases" class="section">
+        <h2><i class="fas fa-trophy"></i> 成功案例</h2>
+        <div class="content">
+          <div class="case-item" onclick="toggleCase('case1')">
+            <div class="case-header">
+              <div class="case-img">
+                <img src="https://p6.itc.cn/q_70/images01/20211117/3eb99f2eead24dbd8469cb9eee84d19b.jpeg" alt="宝钢集团DIAS红外测温系统改造项目">
+              </div>
+              <div class="case-title">
+                <h3>宝钢集团热轧车间DIAS红外测温系统改造</h3>
+                <p>冶金行业 | 热轧工艺 | 高精度测温</p>
+              </div>
+            </div>
+            <div id="case1" class="case-detail">
+              <span class="case-tag">项目规模：千万级</span>
+              <span class="case-tag">实施周期：3个月</span>
+              <span class="case-tag">核心产品：PYROSPOT 80N</span>
+              <p><strong>项目背景：</strong>宝钢集团热轧车间原有测温设备精度低、响应慢，无法满足高端汽车板材生产的温度控制要求。</p>
+              <p><strong>解决方案：</strong>采用德国DIAS PYROSPOT 80N系列固定式红外测温仪，搭配分布式数据采集系统和智能分析平台。</p>
+              <p><strong>实施效果：</strong>测温精度提升至±0.5℃，响应速度≤1ms，年减少废品率3.2%，直接经济效益超800万元/年。</p>
+            </div>
+          </div>
+
+          <div class="case-item" onclick="toggleCase('case2')">
+            <div class="case-header">
+              <div class="case-img">
+                <img src="https://q4.itc.cn/q_70/images01/20250826/5583d4723faa47399c16c87b65c6a4e8.jpeg" alt="隆基绿能硅片烧结DIAS热像仪应用方案">
+              </div>
+              <div class="case-title">
+                <h3>隆基绿能硅片烧结DIAS热像仪应用方案</h3>
+                <p>光伏行业 | 硅片烧结 | 温度均匀性控制</p>
+              </div>
+            </div>
+            <div id="case2" class="case-detail">
+              <span class="case-tag">项目规模：800万</span>
+              <span class="case-tag">实施周期：2个月</span>
+              <span class="case-tag">核心产品：PYROVIEW 700</span>
+              <p><strong>项目背景：</strong>隆基绿能西安生产基地硅片烧结炉温度控制不均，导致电池片转换效率波动大。</p>
+              <p><strong>解决方案：</strong>部署DIAS PYROVIEW 700系列热像仪+PYROLINE在线测温系统，实现温度可视化监控。</p>
+              <p><strong>实施效果：</strong>硅片烧结温度均匀性提升至±2℃，电池片转换效率提升0.8%，良品率提升至99.2%。</p>
+            </div>
+          </div>
+
+          <div class="case-item" onclick="toggleCase('case3')">
+            <div class="case-header">
+              <div class="case-img">
+                <img src="https://pic.rmb.bdstatic.com/bjh/bb9aed99e5/250430/30cfcb71e87ded98310892e50d280cf6.png" alt="福耀玻璃窑炉测温解决方案">
+              </div>
+              <div class="case-title">
+                <h3>福耀玻璃窑炉DIAS红外测温解决方案</h3>
+                <p>玻璃行业 | 窑炉测温 | 高温环境监测</p>
+              </div>
+            </div>
+            <div id="case3" class="case-detail">
+              <span class="case-tag">项目规模：500万</span>
+              <span class="case-tag">实施周期：1.5个月</span>
+              <span class="case-tag">核心产品：高温红外测温仪</span>
+              <p><strong>项目背景：</strong>福耀玻璃某生产基地玻璃窑炉温度监测难度大，传统测温方式无法适应高温、高粉尘环境，数据误差大。</p>
+              <p><strong>解决方案：</strong>采用DIAS高温红外测温仪（测温范围800-2500℃），搭配防尘、防腐蚀保护套，实现窑炉内部温度精准监测。</p>
+              <p><strong>实施效果：</strong>测温数据误差从±5℃降至±1℃，窑炉温度控制更精准，玻璃成品合格率提升2.5%，年节约能耗成本约300万元。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新闻资讯 -->
+      <div id="news" class="section">
+        <h2><i class="fas fa-newspaper"></i> 新闻资讯</h2>
+        <div class="content">
+          <div class="news-content">
+            <div class="news-list">
+              <ul>
+                <li onclick="showNews('news1')">
+                  <span class="news-text">NAS-AE与DIAS达成2026年度战略合作，深化中国市场布局</span>
+                  <span class="news-date">2026-03-20</span>
+                </li>
+                <li onclick="showNews('news2')">
+                  <span class="news-text">德国DIAS新款PYROVIEW 700系列热像仪在华首发</span>
+                  <span class="news-date">2026-02-28</span>
+                </li>
+                <li onclick="showNews('news3')">
+                  <span class="news-text">NAS-AE亮相2026中国国际冶金展，展示智能测温方案</span>
+                  <span class="news-date">2026-01-20</span>
+                </li>
+                <li onclick="showNews('news4')">
+                  <span class="news-text">红外测温技术在新能源行业的应用趋势分析（2026）</span>
+                  <span class="news-date">2025-12-10</span>
+                </li>
+                <li onclick="showNews('news5')">
+                  <span class="news-text">NAS-AE荣获DIAS 2025年度全球最佳合作伙伴奖</span>
+                  <span class="news-date">2025-11-15</span>
+                </li>
+              </ul>
+            </div>
+            <div class="news-promo">
+              <img src="https://s41.ax1x.com/2026/03/30/pe3lvyq.png" alt="DIAS新品发布会">
+              <h4>DIAS 2026新品发布会</h4>
+              <p>德国DIAS将于2026年5月举办新品发布会，推出新一代高精度红外测温产品，敬请期待！</p>
+              <a href="#message" class="btn">预约参会</a>
+            </div>
+          </div>
+
+          <div id="news1" class="news-detail">
+            <h3>NAS-AE与DIAS达成2026年度战略合作，深化中国市场布局</h3>
+            <div class="news-meta">发布时间：2026-03-20 | 分类：公司动态</div>
+            <p>2026年3月20日，NAS-AE与德国DIAS红外系统有限公司签署2026年度战略合作协议，双方将在产品研发、市场推广、技术服务等方面深化合作。</p>
+            <p>根据协议，DIAS将为NAS-AE提供更优先的产品供应保障和技术支持，包括提前曝光新品研发计划、共享核心技术文档、联合开展行业应用研究等。NAS-AE将加大在新能源、高端制造等领域的市场投入，计划2026年在国内新增8个技术服务中心，覆盖华北、华东、华南、西南等主要工业区域。</p>
+          </div>
+          <div id="news2" class="news-detail">
+            <h3>德国DIAS新款PYROVIEW 700系列热像仪在华首发</h3>
+            <div class="news-meta">发布时间：2026-02-28 | 分类：产品动态</div>
+            <p>2026年2月28日，德国DIAS新款PYROVIEW 700系列便携式红外热像仪在上海举行中国首发仪式，NAS-AE作为其中国区独家总代理，负责该产品的全国销售和技术服务。</p>
+            <p>PYROVIEW 700系列是DIAS历时2年研发的新一代产品，具备384×288高分辨率、-20℃~2000℃宽测温范围、IP65防护等级，相比上一代产品，测量精度提升15%，响应速度提升30%，重量减轻20%，适用于工业设备故障诊断、生产过程温度监控等场景。</p>
+          </div>
+          <div id="news3" class="news-detail">
+            <h3>NAS-AE亮相2026中国国际冶金展，展示智能测温方案</h3>
+            <div class="news-meta">发布时间：2026-01-20 | 分类：展会资讯</div>
+            <p>2026年1月20日，2026中国国际冶金工业展览会在上海新国际博览中心开幕，NAS-AE携DIAS全系列红外测温产品参展，重点展示了针对冶金行业的智能测温解决方案。</p>
+            <p>展会上，NAS-AE演示的热轧钢板温度实时监控系统吸引了鞍钢、首钢、河钢等企业关注，该系统基于DIAS高精度测温仪和自主研发的数据分析平台，可实现温度数据精准采集、实时传输和智能分析，帮助企业优化生产工艺，降低能耗和废品率。</p>
+          </div>
+          <div id="news4" class="news-detail">
+            <h3>红外测温技术在新能源行业的应用趋势分析（2026）</h3>
+            <div class="news-meta">发布时间：2025-12-10 | 分类：行业资讯</div>
+            <p>2025年12月10日，NAS-AE发布《2026红外测温技术在新能源行业的应用趋势分析报告》，报告基于对国内100余家新能源企业的调研，分析了红外测温技术在光伏、锂电、氢能等领域的应用现状和发展趋势。</p>
+            <p>报告显示，随着新能源行业快速发展，红外测温技术在硅片烧结、电池片检测、电芯焊接、氢能储运等环节的应用需求激增。2025年新能源行业红外测温市场规模达38亿元，同比增长28%。</p>
+          </div>
+          <div id="news5" class="news-detail">
+            <h3>NAS-AE荣获DIAS 2025年度全球最佳合作伙伴奖</h3>
+            <div class="news-meta">发布时间：2025-11-15 | 分类：公司荣誉</div>
+            <p>2025年11月15日，德国DIAS红外系统有限公司2025全球合作伙伴大会在慕尼黑召开，NAS-AE凭借出色的销售业绩和本地化服务能力，荣获“2025年度全球最佳合作伙伴奖”，这是中国合作伙伴首次获此殊荣。</p>
+            <p>2025年NAS-AE实现DIAS产品销售额同比增长42%，服务客户数量突破500家，客户满意度达98.5%。在颁奖仪式上，DIAS全球CEO高度评价了NAS-AE的本地化服务能力，特别是在新能源行业的市场拓展成果。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下载中心 -->
+      <div id="download" class="section">
+        <h2><i class="fas fa-download"></i> 下载中心</h2>
+        <div class="content">
+          <div class="download-list">
+            <div class="download-item">
+              <h4><i class="fas fa-file-pdf"></i> DIAS产品手册</h4>
+              <p>包含DIAS全系列红外测温仪、热像仪产品参数、技术规格、应用场景</p>
+              <a href="https://www.dias-infrared.com/fileadmin/user_upload/datasheets/DE/DIAS_Pyrospot.pdf" target="_blank" class="download-btn"><i class="fas fa-download"></i> 下载PDF</a>
+            </div>
+            <div class="download-item">
+              <h4><i class="fas fa-file-pdf"></i> 冶金行业解决方案</h4>
+              <p>DIAS红外测温技术在冶金行业的应用案例、实施方案、效益分析</p>
+              <a href="https://www.dias-infrared.com/fileadmin/user_upload/applications/DE/DIAS_App_Stahlwerke.pdf" target="_blank" class="download-btn"><i class="fas fa-download"></i> 下载PDF</a>
+            </div>
+            <div class="download-item">
+              <h4><i class="fas fa-file-pdf"></i> 光伏行业应用指南</h4>
+              <p>硅片烧结、电池片检测等光伏工艺的红外测温技术应用指南</p>
+              <a href="https://www.dias-infrared.com/fileadmin/user_upload/applications/DE/DIAS_App_Photovoltaik.pdf" target="_blank" class="download-btn"><i class="fas fa-download"></i> 下载PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 联系我们 -->
+      <div id="contact" class="section">
+        <h2><i class="fas fa-phone"></i> 联系我们</h2>
+        <div class="content">
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h4><i class="fas fa-map-marker-alt"></i> 公司地址</h4>
+              <p><i class="fas fa-building"></i> 
+<a href="https://map.baidu.com/search/%E4%B8%AD%E5%9B%BD%E8%A7%86%E7%95%8C/@13062532.49692085,3716650.8589856,19z?querytype=s&da_src=shareurl&wd=%E4%B8%AD%E5%9B%BD%E8%A7%86%E7%95%8C&c=127&src=0&pn=0&sug=0&l=13&b=(13040012.965878917,3706365.482446849;13091212.965878917,3732957.482446849)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2" target="_blank" style="color:#0088FF;text-decoration:underline;">安徽省合肥市包河区淝河镇龙川路99号包河区人工智能视觉产业港（中国视界）启动区项目B5幢1单元102</a>
+              </p>
+            </div>
+            <div class="contact-item">
+              <h4><i class="fas fa-phone-volume"></i> 联系方式</h4>
+              <p><i class="fas fa-phone"></i> 18255181513</p>
+              <p><i class="fas fa-envelope"></i> nas_ae@163.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 在线留言 保留原有布局 + 发送到 nas_ae@163.com -->
+<div id="message" class="section">
+  <h2><i class="fas fa-comment"></i> 在线留言</h2>
+  <div class="content">
+    <div class="message-content">
+      <!-- 保留你原来的全部样式布局，只改了表单提交 -->
+      <form action="https://formsubmit.co/nas_ae@163.com" method="POST" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <input type="hidden" name="_subject" value="网站新留言通知">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#message">
+
+        <div class="form-group" style="grid-column:1/2;">
+          <label>您的姓名 <span style="color:#f00;">*</span></label>
+          <input type="text" 
+                 name="name" 
+                 placeholder="请输入姓名" 
+                 required 
+                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+        </div>
+
+        <div class="form-group" style="grid-column:2/3;">
+          <label>联系电话 <span style="color:#f00;">*</span></label>
+          <input type="text" 
+                 name="phone" 
+                 placeholder="请输入电话" 
+                 required 
+                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+        </div>
+
+        <div class="form-group form-full" style="grid-column:1/3;">
+          <label>电子邮箱</label>
+          <input type="email" 
+                 name="email" 
+                 placeholder="请输入邮箱" 
+                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+        </div>
+
+        <div class="form-group form-full" style="grid-column:1/3;">
+          <label>留言内容 <span style="color:#f00;">*</span></label>
+          <textarea name="message" 
+                    placeholder="请输入您的需求..." 
+                    required 
+                    style="width:100%;height:120px;padding:15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;resize:none;transition:all 0.3s;"></textarea>
+        </div>
+
+        <div class="form-submit" style="grid-column:1/3;text-align:center;">
+          <button type="submit" 
+                  style="min-width:160px;height:48px;background:#0088FF;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:15px;transition:all 0.3s;">
+            提交留言
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+      
+      <!-- 版权信息 -->
+      <div style="text-align:center; margin-top:40px; color:#999; font-size:13px;">
+        Copyright © 2026 NAS-AE All Rights Reserved. 德国DIAS红外测温仪中国区独家授权服务商
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+// 导航栏吸顶
+window.addEventListener('scroll',function(){
+  let header = document.getElementById('headerNav');
+  header.classList.toggle('fixed',window.scrollY>50);
+  let back = document.getElementById('backToTop');
+  back.classList.toggle('show',window.scrollY>300);
+});
+
+// 移动端菜单
+let menuBtn = document.getElementById('mobileMenuBtn');
+let mobileMenu = document.getElementById('mobileMenu');
+let menuIcon = menuBtn.querySelector('i');
+
+menuBtn.onclick = function(){
+  if(mobileMenu.style.display === 'block'){
+    closeMobileMenu();
+  }else{
+    mobileMenu.style.display = 'block';
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-times');
+  }
+}
+
+// 关闭移动端菜单
+function closeMobileMenu(){
+  mobileMenu.style.display = 'none';
+  menuIcon.classList.remove('fa-times');
+  menuIcon.classList.add('fa-bars');
+}
+
+// 产品弹窗
+function openProductModal(id){
+  let data = {
+    product1:{img:"https://s41.ax1x.com/2026/03/30/pe3KVZF.jpg",title:"PYROSPOT 固定式红外测温仪",
+      params:"测温范围：200-1800℃ | 精度：±0.5℃ | 响应时间：≤1ms | 防护等级：IP65",
+      desc:"PYROSPOT系列固定式红外测温仪专为工业在线测温设计，采用德国原装进口光学系统和探测器，具备高精度、高稳定性、长寿命等特点，广泛应用于冶金、机械制造、热处理等行业的温度在线监测。"},
+    product2:{img:"https://s41.ax1x.com/2026/03/30/pe3KeIJ.jpg",title:"固定式红外热像仪",
+      params:"分辨率：384×288 | 测温范围：-20~1800℃ | 帧率：60Hz | 接口：千兆以太网",
+      desc:"PYROVIEW系列固定式红外热像仪可实时生成温度场热图像，支持多点温度测量、温度趋势分析、异常报警等功能，适用于自动化生产线、设备状态监测、电气设备检测等场景。"},
+    product3:{img:"https://s41.ax1x.com/2026/03/30/pe3Kni9.png",title:"PYROVIEW 便携式测温仪",
+      params:"测温范围：-20-2000℃ | 精度：±0.3℃ | 防护等级：IP65 | 电池续航：8小时",
+      desc:"便携式红外测温仪具备轻便易携、操作简单、测量精准等优势，支持中文界面、数据存储、USB导出等功能，适用于设备巡检、故障诊断、临时测温等场景。"},
+    product4:{img:"https://s41.ax1x.com/2026/03/30/pe3KuGR.jpg",title:"黑体炉",
+      params:"温度稳定性：±0.1℃ | 发射率：0.99 | 控温精度：±0.1℃ | 工作温度：50-1200℃",
+      desc:"DIAS黑体炉专为红外测温设备校准设计，具备超高温度稳定性和均匀发射率，可实现测温仪精准校准，确保测量数据准确可靠。"},
+    product5:{img:"https://s41.ax1x.com/2026/03/30/pe3MuTg.jpg",title:"非接触测温热成像系统",
+      params:"测温精度：±1℃ | 响应时间：≤1ms | 扫描频率：100Hz | 通信协议：Modbus TCP/IP",
+      desc:"在线式扫描测温系统采用高速红外扫描技术，可实现运动物体表面温度全覆盖扫描测温，自动生成温度云图和数据分析报告。"},
+    product6:{img:"https://s41.ax1x.com/2026/03/30/pe3MMkQ.jpg",title:"红外探测器",
+      params:"光谱范围：7.5-14μm | 探测灵敏度：50mK | 工作温度：-20~70℃ | 寿命：≥10万小时",
+      desc:"原装进口红外探测器芯片，具备超高灵敏度和稳定性，适用于高精度红外测温仪、热像仪、红外分析仪器等核心部件。"}
+  };
+  let d = data[id];
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-img"><img src="${d.img}" alt="${d.title}"></div>
+    <div class="modal-info">
+      <h4>${d.title}</h4>
+      <div class="param-item"><span class="param-label">产品型号</span><span class="param-value">${d.title}</span></div>
+      <div class="param-item"><span class="param-label">技术参数</span><span class="param-value">${d.params}</span></div>
+      <div class="param-item"><span class="param-label">产品产地</span><span class="param-value">德国原装进口</span></div>
+      <div class="param-item"><span class="param-label">质保期限</span><span class="param-value">2年官方质保</span></div>
+      <a href="#message" class="btn" style="margin-top:20px;width:100%;text-align:center;">立即咨询</a>
+    </div>
+    <div class="modal-desc"><h5>产品介绍</h5><p>${d.desc}</p></div>
+  `;
+  document.getElementById('productModal').style.display = "flex";
+}
+
+// 关闭产品弹窗
+function closeProductModal(){
+  document.getElementById('productModal').style.display = "none";
+}
+
+// 点击弹窗空白处关闭
+function clickModalClose(event){
+  if(event.target === document.getElementById('productModal')){
+    closeProductModal();
+  }
+}
+
+// 成功案例
+function toggleCase(id){
+  let el = document.getElementById(id);
+  el.style.display = el.style.display=='block'?'none':'block';
+}
+
+// 新闻资讯
+let currentNews = null;
+function showNews(id){
+  if(currentNews) currentNews.style.display = "none";
+  currentNews = document.getElementById(id);
+  currentNews.style.display = "block";
+}
+
+// 页面加载默认显示第一条新闻
+window.onload = function(){
+  showNews('news1');
+}
+
+// 回到顶部
+document.getElementById('backToTop').onclick = function(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
