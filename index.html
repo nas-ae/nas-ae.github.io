@@ -1139,62 +1139,151 @@ img{max-width:100%;vertical-align:middle;}
         </div>
       </div>
 
-      <!-- 在线留言 保留原有布局 + 发送到 nas_ae@163.com -->
+ <!-- 在线留言（和网站其他板块统一样式） -->
 <div id="message" class="section">
   <h2><i class="fas fa-comment"></i> 在线留言</h2>
   <div class="content">
-    <div class="message-content">
-      <!-- 保留你原来的全部样式布局，只改了表单提交 -->
-      <form action="https://formsubmit.co/nas_ae@163.com" method="POST" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-        <input type="hidden" name="_subject" value="网站新留言通知">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="#message">
+    <style>
+      /* 留言表单样式（和网站统一） */
+      .message-form {
+        width: 100%;
+      }
+      .message-form .form-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .message-form .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .message-form .form-group.full-width {
+        flex: 1 1 100%;
+      }
+      .message-form .form-group label {
+        font-size: 15px;
+        color: #333;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      .message-form .form-group label .required {
+        color: #ff4444;
+        margin-left: 4px;
+      }
+      .message-form .form-group input,
+      .message-form .form-group textarea {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #333;
+        outline: none;
+        transition: border-color 0.3s;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+      .message-form .form-group input:focus,
+      .message-form .form-group textarea:focus {
+        border-color: #0088FF;
+      }
+      .message-form .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .message-form .submit-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #0088FF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-top: 10px;
+      }
+      .message-form .submit-btn:hover {
+        background: #0066CC;
+        transform: translateY(-2px);
+      }
 
-        <div class="form-group" style="grid-column:1/2;">
-          <label>您的姓名 <span style="color:#f00;">*</span></label>
-          <input type="text" 
-                 name="name" 
-                 placeholder="请输入姓名" 
-                 required 
-                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+      /* 成功提示（和网站风格统一） */
+      .form-toast {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0088FF;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 9999;
+        box-shadow: 0 4px 12px rgba(0,136,255,0.2);
+        display: none;
+      }
+    </style>
+
+    <form id="contactForm" class="message-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>您的姓名 <span class="required">*</span></label>
+          <input type="text" name="姓名" placeholder="请输入您的姓名" required>
         </div>
-
-        <div class="form-group" style="grid-column:2/3;">
-          <label>联系电话 <span style="color:#f00;">*</span></label>
-          <input type="text" 
-                 name="phone" 
-                 placeholder="请输入电话" 
-                 required 
-                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+        <div class="form-group">
+          <label>联系电话 <span class="required">*</span></label>
+          <input type="tel" name="手机" placeholder="请输入您的电话" required>
         </div>
+      </div>
 
-        <div class="form-group form-full" style="grid-column:1/3;">
+      <div class="form-row">
+        <div class="form-group full-width">
           <label>电子邮箱</label>
-          <input type="email" 
-                 name="email" 
-                 placeholder="请输入邮箱" 
-                 style="width:100%;height:45px;padding:0 15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;transition:all 0.3s;">
+          <input type="email" name="邮箱" placeholder="请输入您的邮箱">
         </div>
+      </div>
 
-        <div class="form-group form-full" style="grid-column:1/3;">
-          <label>留言内容 <span style="color:#f00;">*</span></label>
-          <textarea name="message" 
-                    placeholder="请输入您的需求..." 
-                    required 
-                    style="width:100%;height:120px;padding:15px;border:1px solid #ddd;border-radius:4px;outline:none;font-size:14px;resize:none;transition:all 0.3s;"></textarea>
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label>留言内容 <span class="required">*</span></label>
+          <textarea name="留言" placeholder="请输入您的需求或问题..." required></textarea>
         </div>
+      </div>
 
-        <div class="form-submit" style="grid-column:1/3;text-align:center;">
-          <button type="submit" 
-                  style="min-width:160px;height:48px;background:#0088FF;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:15px;transition:all 0.3s;">
-            提交留言
-          </button>
-        </div>
-      </form>
-    </div>
+      <button type="submit" class="submit-btn">提交留言</button>
+    </form>
+
+    <!-- 提交成功提示 -->
+    <div class="form-toast" id="formToast">感谢您的咨询，我们会尽快与您联系！</div>
   </div>
 </div>
-      
+
+<script>
+const form = document.getElementById('contactForm');
+const toast = document.getElementById('formToast');
+const apiUrl = "https://1258393798-23z36m91rn.ap-guangzhou.tencentscf.com";
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  try {
+    await fetch(apiUrl, {
+      method: "POST",
+      body: new FormData(form)
+    });
+    // 显示成功提示
+    toast.style.display = "block";
+    setTimeout(() => {
+      toast.style.display = "none";
+    }, 3000);
+    form.reset();
+  } catch (err) {
+    alert("提交失败，请稍后重试");
+  }
+});
+</script>
+
+        
       <!-- 版权信息 -->
       <div style="text-align:center; margin-top:40px; color:#999; font-size:13px;">
         Copyright © 2026 NAS-AE All Rights Reserved. 德国DIAS红外测温仪中国区独家授权服务商
